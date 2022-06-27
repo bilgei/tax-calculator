@@ -17,7 +17,7 @@ namespace tax_calculator
             var calculator = new CongestionTaxCalculator();
             var result = calculator.GetTax(new Car(), dates);
 
-            Assert.Equal(26, result);
+            Assert.Equal(18, result);
         }
     }
 }

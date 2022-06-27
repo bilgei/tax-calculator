@@ -19,8 +19,7 @@ public class CongestionTaxCalculator
             int nextFee = GetTollFee(date, vehicle);
             int tempFee = GetTollFee(intervalStart, vehicle);
 
-            long diffInMillies = date.Millisecond - intervalStart.Millisecond;
-            long minutes = diffInMillies / 1000 / 60;
+            double minutes = (date - intervalStart).TotalMinutes;
 
             if (minutes <= 60)
             {
@@ -32,6 +31,8 @@ public class CongestionTaxCalculator
             {
                 totalFee += nextFee;
             }
+
+            intervalStart = date;
         }
         if (totalFee > 60) totalFee = 60;
         return totalFee;

@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Controllers\salfza3j.rxy~" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\src\tax-calculator-application.csproj" />
   </ItemGroup>
 

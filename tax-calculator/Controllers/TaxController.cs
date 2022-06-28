@@ -1,9 +1,8 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using tax_calculator_application;
 using tax_calculator.Models;
-using Newtonsoft.Json;
-using System.Linq;
 
 namespace tax_calculator.Controllers
 {

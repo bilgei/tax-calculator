@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>tax.calculator</RootNamespace>
+    <RootNamespace>tax_calculator</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\src\tax-calculator-application.csproj" />
   </ItemGroup>
 
 

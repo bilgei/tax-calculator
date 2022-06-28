@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace tax_calculator
+namespace tax_calculator_application
 {
     public class TaxCalculatorTests
     {
@@ -15,7 +15,7 @@ namespace tax_calculator
             };
 
             var calculator = new CongestionTaxCalculator();
-            var result = calculator.GetTax(new Car(), dates);
+            var result = calculator.GetTax("Car", dates);
 
             Assert.Equal(18, result);
         }

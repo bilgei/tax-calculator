@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tax-calculator", "tax-calculator\tax-calculator.csproj", "{D57910E0-B596-402C-BCBC-A7C47A15E1EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tax-calculator-api", "tax-calculator\tax-calculator-api.csproj", "{D57910E0-B596-402C-BCBC-A7C47A15E1EA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tax-calculator-application", "src\tax-calculator-application.csproj", "{03043EBD-9064-42C0-82D7-7757EFC56804}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tax-calculator-tests", "tax-calculator-tests\tax-calculator-tests.csproj", "{1C55D730-787F-4F1B-BFE5-93DA739D248A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tax-calculator-infrastructure", "tax-calculator-infrastructure\tax-calculator-infrastructure.csproj", "{C4AB2436-349E-4307-8047-10A89B15600C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{03043EBD-9064-42C0-82D7-7757EFC56804}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03043EBD-9064-42C0-82D7-7757EFC56804}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03043EBD-9064-42C0-82D7-7757EFC56804}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C55D730-787F-4F1B-BFE5-93DA739D248A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C55D730-787F-4F1B-BFE5-93DA739D248A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C55D730-787F-4F1B-BFE5-93DA739D248A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C55D730-787F-4F1B-BFE5-93DA739D248A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4AB2436-349E-4307-8047-10A89B15600C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4AB2436-349E-4307-8047-10A89B15600C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4AB2436-349E-4307-8047-10A89B15600C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4AB2436-349E-4307-8047-10A89B15600C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

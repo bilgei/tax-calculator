@@ -1,8 +1,9 @@
-using System;
+﻿using System;
+using tax_calculator_application.Interfaces;
 
-namespace tax_calculator_application
+namespace tax_calculator_infrastructure.Repositories
 {
-    public class CongestionTaxCalculator
+    public class TaxCalculatorRepository : ITaxCalculatorRepository
     {
         /**
              * Calculate the total toll fee for one day
@@ -18,8 +19,8 @@ namespace tax_calculator_application
             int totalFee = 0;
             foreach (DateTime date in dates)
             {
-                int nextFee = GetTollFee(date, vehicle);
-                int tempFee = GetTollFee(intervalStart, vehicle);
+                int nextFee = GetTollFee(vehicle, date);
+                int tempFee = GetTollFee(vehicle, intervalStart);
 
                 double minutes = (date - intervalStart).TotalMinutes;
 
@@ -40,17 +41,7 @@ namespace tax_calculator_application
             return totalFee;
         }
 
-        private bool IsTollFreeVehicle(string vehicleType)
-        {
-            return vehicleType.Equals(TollFreeVehicles.Motorcycle.ToString()) ||
-                   vehicleType.Equals(TollFreeVehicles.Tractor.ToString()) ||
-                   vehicleType.Equals(TollFreeVehicles.Emergency.ToString()) ||
-                   vehicleType.Equals(TollFreeVehicles.Diplomat.ToString()) ||
-                   vehicleType.Equals(TollFreeVehicles.Foreign.ToString()) ||
-                   vehicleType.Equals(TollFreeVehicles.Military.ToString());
-        }
-
-        public int GetTollFee(DateTime date, string vehicle)
+        public int GetTollFee(string vehicle, DateTime date)
         {
             if (IsTollFreeDate(date) || IsTollFreeVehicle(vehicle)) return 0;
 
@@ -67,6 +58,16 @@ namespace tax_calculator_application
             else if (hour == 17 && minute >= 0 && minute <= 59) return 13;
             else if (hour == 18 && minute >= 0 && minute <= 29) return 8;
             else return 0;
+        }
+
+        private bool IsTollFreeVehicle(string vehicleType)
+        {
+            return vehicleType.Equals(TollFreeVehicles.Motorcycle.ToString()) ||
+                   vehicleType.Equals(TollFreeVehicles.Tractor.ToString()) ||
+                   vehicleType.Equals(TollFreeVehicles.Emergency.ToString()) ||
+                   vehicleType.Equals(TollFreeVehicles.Diplomat.ToString()) ||
+                   vehicleType.Equals(TollFreeVehicles.Foreign.ToString()) ||
+                   vehicleType.Equals(TollFreeVehicles.Military.ToString());
         }
 
         private Boolean IsTollFreeDate(DateTime date)

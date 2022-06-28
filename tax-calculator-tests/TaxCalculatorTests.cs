@@ -1,7 +1,8 @@
 ﻿using System;
 using Xunit;
+using tax_calculator_infrastructure.Repositories;
 
-namespace tax_calculator_application
+namespace tax_calculator_tests
 {
     public class TaxCalculatorTests
     {
@@ -14,8 +15,8 @@ namespace tax_calculator_application
                 new DateTime(2013, 1, 10, 7, 0, 0)
             };
 
-            var calculator = new CongestionTaxCalculator();
-            var result = calculator.GetTax("Car", dates);
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTax("Car", dates);
 
             Assert.Equal(18, result);
         }

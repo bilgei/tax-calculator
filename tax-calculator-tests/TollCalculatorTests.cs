@@ -1,7 +1,8 @@
 ﻿using System;
 using Xunit;
+using tax_calculator_infrastructure.Repositories;
 
-namespace tax_calculator_application
+namespace tax_calculator_tests
 {
     public class TollCalculatorTests
     {
@@ -10,11 +11,9 @@ namespace tax_calculator_application
         {
             var expectedTollFee = 8;
             var date = new DateTime(2013, 1, 10, 6, 0, 0);
-            //var car = new Car();
 
-            var calculator = new CongestionTaxCalculator();
-
-            var result = calculator.GetTollFee(date, "Car");
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTollFee("Car", date);
 
             Assert.Equal(expected: expectedTollFee, actual: result);
         }
@@ -24,11 +23,9 @@ namespace tax_calculator_application
         {
             var expectedTollFee = 13;
             var date = new DateTime(2013, 1, 10, 6, 30, 0);
-            //var car = new Car();
 
-            var calculator = new CongestionTaxCalculator();
-
-            var result = calculator.GetTollFee(date, "Car");
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTollFee("Car", date);
 
             Assert.Equal(expected: expectedTollFee, actual: result);
         }
@@ -38,11 +35,9 @@ namespace tax_calculator_application
         {
             var expectedTollFee = 18;
             var date = new DateTime(2013, 1, 10, 7, 0, 0);
-            //var car = new Car();
 
-            var calculator = new CongestionTaxCalculator();
-
-            var result = calculator.GetTollFee(date, "Car");
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTollFee("Car", date);
 
             Assert.Equal(expected: expectedTollFee, actual: result);
         }
@@ -52,11 +47,9 @@ namespace tax_calculator_application
         {
             var expectedTollFee = 13;
             var date = new DateTime(2013, 1, 10, 8, 0, 0);
-            //var car = new Car();
 
-            var calculator = new CongestionTaxCalculator();
-
-            var result = calculator.GetTollFee(date, "Car");
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTollFee("Car", date);
 
             Assert.Equal(expected: expectedTollFee, actual: result);
         }
@@ -66,11 +59,9 @@ namespace tax_calculator_application
         {
             var expectedTollFee = 8;
             var date = new DateTime(2013, 1, 10, 12, 0, 0);
-            //var car = new Car();
 
-            var calculator = new CongestionTaxCalculator();
-
-            var result = calculator.GetTollFee(date, "Car");
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTollFee("Car", date);
 
             Assert.Equal(expected: expectedTollFee, actual: result);
         }
@@ -80,11 +71,9 @@ namespace tax_calculator_application
         {
             var expectedTollFee = 13;
             var date = new DateTime(2013, 1, 10, 15, 0, 0);
-            //var car = new Car();
 
-            var calculator = new CongestionTaxCalculator();
-
-            var result = calculator.GetTollFee(date, "Car");
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTollFee("Car", date);
 
             Assert.Equal(expected: expectedTollFee, actual: result);
         }
@@ -94,11 +83,9 @@ namespace tax_calculator_application
         {
             var expectedTollFee = 18;
             var date = new DateTime(2013, 1, 10, 16, 0, 0);
-            //var car = new Car();
 
-            var calculator = new CongestionTaxCalculator();
-
-            var result = calculator.GetTollFee(date, "Car");
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTollFee("Car", date);
 
             Assert.Equal(expected: expectedTollFee, actual: result);
         }
@@ -108,11 +95,9 @@ namespace tax_calculator_application
         {
             var expectedTollFee = 13;
             var date = new DateTime(2013, 1, 10, 17, 0, 0);
-            //var car = new Car();
 
-            var calculator = new CongestionTaxCalculator();
-
-            var result = calculator.GetTollFee(date, "Car");
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTollFee("Car", date);
 
             Assert.Equal(expected: expectedTollFee, actual: result);
         }
@@ -122,11 +107,9 @@ namespace tax_calculator_application
         {
             var expectedTollFee = 8;
             var date = new DateTime(2013, 1, 10, 18, 0, 0);
-            //var car = new Car();
 
-            var calculator = new CongestionTaxCalculator();
-
-            var result = calculator.GetTollFee(date, "Car");
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTollFee("Car", date);
 
             Assert.Equal(expected: expectedTollFee, actual: result);
         }
@@ -136,11 +119,9 @@ namespace tax_calculator_application
         {
             var expectedTollFee = 0;
             var date = new DateTime(2013, 1, 10, 19, 0, 0);
-            //var car = new Car();
 
-            var calculator = new CongestionTaxCalculator();
-
-            var result = calculator.GetTollFee(date, "Car");
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTollFee("Car", date);
 
             Assert.Equal(expected: expectedTollFee, actual: result);
         }

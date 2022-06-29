@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "557768eb-7805-43c8-9966-c0c00cf54c92",
+		"name": "Tax.Calculation.Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CalculateTax",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"VehicleType\":\"Tractor\",\r\n    \"DateTimes\":[\"2013-01-14 06:30:00\", \"2013-01-14 07:30:00\", \"2013-01-14 17:30:00\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44389/api/calculate/tax",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44389",
+					"path": [
+						"api",
+						"calculate",
+						"tax"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

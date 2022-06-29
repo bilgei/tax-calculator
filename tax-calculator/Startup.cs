@@ -1,15 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using tax_calculator_application.Interfaces;
+using tax_calculator_application.Services;
+using tax_calculator_infrastructure.Repositories;
 
 namespace tax_calculator
 {
@@ -26,6 +22,9 @@ namespace tax_calculator
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddScoped<ICongestionTaxService, CongestionTaxService>();
+            services.AddScoped<ITaxCalculatorRepository, TaxCalculatorRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

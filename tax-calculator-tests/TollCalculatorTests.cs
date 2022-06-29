@@ -125,5 +125,17 @@ namespace tax_calculator_tests
 
             Assert.Equal(expected: expectedTollFee, actual: result);
         }
+
+        [Fact]
+        public void BusTollFee_At9_Returns0()
+        {
+            var expectedTollFee = 0;
+            var date = new DateTime(2013, 1, 10, 9, 0, 0);
+
+            var taxCalculatorRepository = new TaxCalculatorRepository();
+            var result = taxCalculatorRepository.GetTollFee("Bus", date);
+
+            Assert.Equal(expected: expectedTollFee, actual: result);
+        }
     }
 }

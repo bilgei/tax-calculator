@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\src\tax-calculator-application.csproj" />
+    <ProjectReference Include="..\tax-calculator-infrastructure\tax-calculator-infrastructure.csproj" />
   </ItemGroup>
 
 

@@ -63,14 +63,14 @@ namespace tax_calculator_infrastructure.Repositories
         private bool IsTollFreeVehicle(string vehicleType)
         {
             return vehicleType.Equals(TollFreeVehicles.Motorcycle.ToString()) ||
-                   vehicleType.Equals(TollFreeVehicles.Tractor.ToString()) ||
+                   vehicleType.Equals(TollFreeVehicles.Bus.ToString()) ||
                    vehicleType.Equals(TollFreeVehicles.Emergency.ToString()) ||
                    vehicleType.Equals(TollFreeVehicles.Diplomat.ToString()) ||
                    vehicleType.Equals(TollFreeVehicles.Foreign.ToString()) ||
                    vehicleType.Equals(TollFreeVehicles.Military.ToString());
         }
 
-        private Boolean IsTollFreeDate(DateTime date)
+        private bool IsTollFreeDate(DateTime date)
         {
             int year = date.Year;
             int month = date.Month;
@@ -98,7 +98,7 @@ namespace tax_calculator_infrastructure.Repositories
         private enum TollFreeVehicles
         {
             Motorcycle = 0,
-            Tractor = 1,
+            Bus = 1,
             Emergency = 2,
             Diplomat = 3,
             Foreign = 4,

@@ -1,8 +1,9 @@
-# Tests
+## Tests
 I have added unit tests and find out some bugs:
 - TollFee calculation between 8:30 and 17:00
 - Tax calculation for the "a vehicle that passes several tolling stations within 60 minutes is only taxed once." rule.
 - There are no exempt applied for busses.
+
 I fixed them all, after writing their tests. (TDD)
 
 ## Entry Point
